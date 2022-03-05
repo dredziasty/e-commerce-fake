@@ -43,7 +43,6 @@ loginAction.addEventListener('click', async() => {
       }))
 
       loginForm.reset()
-        // await displayPopup('Successfully logged in. Redirecting.')
       location.reload()
     }
   } catch (error) {
@@ -68,7 +67,7 @@ registerAction.addEventListener('click', async() => {
 
     if (result.status === 201) {
       registerForm.reset()
-      await displayPopup('Pomyślnie zarejestrowano.', 'info')
+      await displayPopup('Pomyślnie zarejestrowano.', 'success')
     }
   } catch (error) {
     console.error(error)
@@ -78,7 +77,7 @@ registerAction.addEventListener('click', async() => {
 logoutAction.addEventListener('click', async() => {
   localStorage.removeItem('user')
   await axios.post('/api/auth/logout')
-  await displayPopup('Pomyślnie wylogowano. Przekierowuję.', 'info')
+  await displayPopup('Pomyślnie wylogowano. Przekierowuję.', 'success')
   location.reload()
 })
 

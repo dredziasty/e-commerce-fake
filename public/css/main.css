@@ -88,5 +88,5 @@ form {
     box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5); }
   .popup-error {
     box-shadow: 0px 0px 5px 1px rgba(215, 0, 0, 0.5); }
-  .popup-info {
-    box-shadow: 0px 0px 5px 1px rgba(0, 0, 215, 0.5); }
+  .popup-success {
+    box-shadow: 0px 0px 5px 1px rgba(0, 215, 0, 0.5); }

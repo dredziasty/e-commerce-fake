@@ -6,7 +6,7 @@ buyAction.addEventListener('click', async() => {
   try {
     const result = await axios.post(`/api/products/${buyAction.dataset.product}/buy`)
     if (result.status === 200) {
-      await displayPopup('Kupiono produkt.', 'info', 2000)
+      await displayPopup('Kupiono produkt.', 'success', 2000)
       location.reload()
     }
   } catch (error) {

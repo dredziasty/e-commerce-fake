@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>eCommerceFake</title>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/product.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.0/axios.min.js" integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="popup"></div>
+
+  <header>
+    <a href="/">
+      <h1>eCommerceFake</h1>
+    </a>
+  </header>
+
+  <div class="container">
+    <aside>
+      <form class="login-form aside-form">
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email">
+        <label for="password">Hasło</label>
+        <input type="password" name="password" id="password">
+        <button type="button" class="login-action">Zaloguj</button>
+      </form>
+
+      <form class="register-form aside-form">
+        <label for="firstname">Imię</label>
+        <input type="text" name="firstname" id="firstname">
+        <label for="lastname">Nazwisko</label>
+        <input type="text" name="lastname" id="lastname">
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email">
+        <label for="password">Hasło</label>
+        <input type="password" name="password" id="password">
+        <button type="button" class="register-action">Zarejestruj</button>
+      </form>
+
+      <form class="logout-form aside-form" style="display: none;">
+        <div class="username">
+          <span>Użytkownik: </span>
+          <span class="username-data"></span>
+        </div>
+        <button type="button" class="logout-action">Wyloguj</button>
+      </form>
+    </aside>
+
+    <main>
+      <section class="product">
+        <div class="product-main">
+          <img src="<%= product.imageLarge %>" alt="">
+          <div class="product-details">
+            <h2 class="product-title">
+              <%= product.name %>
+            </h2>
+            <p class="product-sku">
+              <%= product.sku %>
+            </p>
+            <p class="product-price">
+              <%= product.price %> PLN
+            </p>
+            <button type="button" class="buy-action" data-product="<%= product._id %>">Kupuję</button>
+          </div>
+        </div>
+        <p class="product-desc">
+          <span>Opis produktu: </span>
+          <%= product.description %>
+        </p>
+      </section>
+
+      <section class="reviews">
+        <form class="review-form" data-can-add-review="<%= canAddReview %>">
+          <input type="hidden" name="productId" value="<%= product._id %>">
+          <label for="rate">Ocena</label>
+          <select name="rate" id="rate">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+          <label for="name">Nazwa</label>
+          <input type="text" name="name" id="name">
+          <label for="review">Opinia</label>
+          <textarea name="review" id="review" cols="30" rows="5"></textarea>
+          <button type="button" class="review-action">Dodaj opinię</button>
+        </form>
+
+        <div class="reviews-content">
+          <% reviews.forEach(function(review) { %>
+            <div class="reviews-item">
+              <span class="reviews-name">dodał(a): <%= review.name %></span>
+              <span class="reviews-rate"><%= review.rate %> / 5</span>
+              <p class="reviews-review">
+                <%= review.review %>
+              </p>
+            </div>
+            <% }) %>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer></footer>
+
+  <script src="/js/auth.js" defer></script>
+  <script src="/js/review.js" defer></script>
+</body>
+
+</html>

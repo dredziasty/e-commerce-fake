@@ -1,0 +1,50 @@
+main {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 100%; }
+
+.product-main {
+  display: flex; }
+
+.product-details {
+  margin-left: 2rem; }
+
+.product-title {
+  font-size: 1.5rem; }
+
+.product-sku {
+  font-weight: 500;
+  color: #aaaaaa; }
+
+.product-price {
+  margin: 1rem 0;
+  font-weight: 600; }
+
+.product-desc {
+  margin-top: 1rem; }
+  .product-desc span {
+    color: #aaaaaa;
+    font-weight: 600;
+    font-size: 1rem; }
+
+.buy-action {
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem; }
+
+.reviews {
+  margin-right: 10vw; }
+  .reviews-item {
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25); }
+  .reviews-rate, .reviews-name {
+    font-weight: 600; }
+  .reviews-name {
+    margin-right: 1rem; }
+  .reviews-review {
+    margin-top: 0.5rem; }
+
+.review-form {
+  width: 500px; }

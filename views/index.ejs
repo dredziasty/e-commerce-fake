@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>eCommerceFake</title>
+  <link rel="stylesheet" href="/css/main.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.0/axios.min.js" integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="popup"></div>
+
+  <header>
+    <a href="/">
+      <h1>eCommerceFake</h1>
+    </a>
+  </header>
+
+  <div class="container">
+    <aside>
+      <form class="login-form">
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email">
+        <label for="password">Hasło</label>
+        <input type="password" name="password" id="password">
+        <button type="button" class="login-action">Zaloguj</button>
+      </form>
+
+      <form class="register-form">
+        <label for="firstname">Imię</label>
+        <input type="text" name="firstname" id="firstname">
+        <label for="lastname">Nazwisko</label>
+        <input type="text" name="lastname" id="lastname">
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email">
+        <label for="password">Hasło</label>
+        <input type="password" name="password" id="password">
+        <button type="button" class="register-action">Zarejestruj</button>
+      </form>
+
+      <form class="logout-form" style="display: none;">
+        <div class="username">
+          <span>Użytkownik: </span>
+          <span class="username-data"></span>
+        </div>
+        <button type="button" class="logout-action">Wyloguj</button>
+      </form>
+    </aside>
+
+    <main>
+      <section class="products-list">
+        <h2 class="products-list-header">Lista produktów</h2>
+        <div class="products-list-content">
+          <% products.forEach(function(product) { %>
+            <a href="/products/<%= product.sku %>" class="products-list-link">
+              <img src="<%= product.imageSmall %>" alt="" />
+              <div>
+                <span><%= product.name %></span>
+                <span><%= product.price %> PLN</span>
+              </div>
+            </a>
+            <% }) %>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer></footer>
+
+  <script src="/js/auth.js" defer></script>
+</body>
+
+</html>

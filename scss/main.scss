@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  padding: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+header {
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+aside {
+  margin-right: 3rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  margin: 0 0 1rem 0;
+  padding: 0.5rem;
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.25);
+  & label {
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+  & button {
+    font-weight: 500;
+    width: 100%;
+  }
+  & input,
+  & textarea,
+  & select {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    padding: 0.2rem;
+    resize: none;
+  }
+}
+
+.logout-form {
+  & .username {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+}
+
+.container {
+  display: flex;
+}
+
+.products-list {
+  &-content {
+    display: flex;
+    justify-content: flex;
+    flex-wrap: wrap;
+  }
+  &-link {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.25);
+    padding: 0.5rem;
+    transition: box-shadow 0.1s ease-in-out;
+    &:hover {
+      box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.75);
+    }
+    & div {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+.popup {
+  position: absolute;
+  z-index: 1000;
+  padding: 0.75rem;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  display: none;
+  font-weight: 500;
+  &-show {
+    display: block;
+  }
+  &-default {
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
+  }
+  &-error {
+    box-shadow: 0px 0px 5px 1px rgba(215, 0, 0, 0.5);
+  }
+  &-info {
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 215, 0.5);
+  }
+}

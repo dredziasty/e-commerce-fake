@@ -1,0 +1,55 @@
+[{
+    "name": "Koszulka 1",
+    "sku": "koszulka-1",
+    "description": "Super koszulka",
+    "imageSmall": "https://picsum.photos/id/237/200/250",
+    "imageLarge": "https://picsum.photos/id/237/400/500",
+    "price": 15.99
+  },
+
+  {
+    "name": "Koszulka 2",
+    "sku": "koszulka-2",
+    "description": "Super koszulka 2",
+    "imageSmall": "https://picsum.photos/id/27/200/250",
+    "imageLarge": "https://picsum.photos/id/27/400/500",
+    "price": 18.99
+  },
+
+  {
+    "name": "Spodnie 1",
+    "sku": "spodnie-1",
+    "description": "Super spodnie",
+    "imageSmall": "https://picsum.photos/id/41/200/250",
+    "imageLarge": "https://picsum.photos/id/41/400/500",
+    "price": 65.99
+  },
+
+  {
+    "name": "Spodnie 2",
+    "sku": "spodnie-2",
+    "description": "Super spodnie 2",
+    "imageSmall": "https://picsum.photos/id/59/200/250",
+    "imageLarge": "https://picsum.photos/id/59/400/500",
+    "price": 95.99
+  },
+
+  {
+    "name": "Bluza 1",
+    "sku": "bluza-1",
+    "description": "Super bluza",
+    "imageSmall": "https://picsum.photos/id/83/200/250",
+    "imageLarge": "https://picsum.photos/id/83/400/500",
+    "price": 115.99
+  },
+
+  {
+    "name": "Bluza 2",
+    "sku": "bluza-2",
+    "description": "Super bluza 2",
+    "imageSmall": "https://picsum.photos/id/131/200/250",
+    "imageLarge": "https://picsum.photos/id/131/400/500",
+    "price": 215.99
+  }
+
+]

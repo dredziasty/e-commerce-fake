@@ -8,7 +8,9 @@
   <title>eCommerceFake</title>
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/product.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.0/axios.min.js" integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.0/axios.min.js"
+    integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -99,7 +101,9 @@
           <% reviews.forEach(function(review) { %>
             <div class="reviews-item">
               <span class="reviews-name">dodał(a): <%= review.name %></span>
-              <span class="reviews-rate"><%= review.rate %> / 5</span>
+              <span class="reviews-rate">
+                <%= review.rate %> / 5
+              </span>
               <p class="reviews-review">
                 <%= review.review %>
               </p>

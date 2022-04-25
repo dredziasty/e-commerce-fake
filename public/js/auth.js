@@ -13,7 +13,7 @@ const classes = {
 
 const timeout = (ms) => new Promise(resolve => setTimeout(resolve, ms))
 
-const displayPopup = async(message, type = 'default', ms = 2000) => {
+const displayPopup = async (message, type = 'default', ms = 2000) => {
   popup.textContent = message
   popup.classList.add(classes.popupShow)
   popup.classList.add(`popup-${type}`)
@@ -25,7 +25,7 @@ const displayPopup = async(message, type = 'default', ms = 2000) => {
   popup.classList.add(`popup-${type}`)
 }
 
-loginAction.addEventListener('click', async() => {
+loginAction.addEventListener('click', async () => {
   try {
     const formData = new FormData(loginForm)
     const email = formData.get('email')
@@ -50,7 +50,7 @@ loginAction.addEventListener('click', async() => {
   }
 })
 
-registerAction.addEventListener('click', async() => {
+registerAction.addEventListener('click', async () => {
   try {
     const formData = new FormData(registerForm)
     const email = formData.get('email')
@@ -74,7 +74,7 @@ registerAction.addEventListener('click', async() => {
   }
 })
 
-logoutAction.addEventListener('click', async() => {
+logoutAction.addEventListener('click', async () => {
   localStorage.removeItem('user')
   await axios.post('/api/auth/logout')
   await displayPopup('Pomyślnie wylogowano. Przekierowuję.', 'success')
